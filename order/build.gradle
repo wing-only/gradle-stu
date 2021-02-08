@@ -1,0 +1,5 @@
+dependencies {
+    compile project(":common")
+    compile "org.springframework:spring-webmvc:${springVersion}"
+    compile group: "org.springframework", name: "spring-context", version: "${springVersion}"
+}

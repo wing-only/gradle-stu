@@ -1,0 +1,48 @@
+/**
+ * 所有项目模块通用
+ */
+allprojects {
+    group 'com.wing.gradle'
+    version '1.0.0'
+
+    //设置字符集
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+    tasks.withType(Javadoc) {
+        options.encoding = 'UTF-8'
+    }
+}
+
+/**
+ * 子项目模块使用
+ */
+subprojects {
+    /**
+     * project扩展属性
+     */
+    ext {
+        springVersion = '4.3.11.RELEASE'
+        jacksonVersion = '2.8.10'
+    }
+
+    apply plugin: 'java'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    dependencies {
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+    }
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+    }
+}
+
+
+
+
+
