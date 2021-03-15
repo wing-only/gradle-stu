@@ -1,6 +1,6 @@
 rootProject.name = 'gradle-stu'
 include 'common'
 include 'sys'
-include 'starter'
 include 'order'
+include 'starter'
 
