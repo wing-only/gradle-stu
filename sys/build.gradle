@@ -1,5 +1,5 @@
 dependencies {
-    compile project(':common')
-    compile "org.springframework:spring-webmvc:${springVersion}"
-    compile group: "org.springframework", name: "spring-context", version: "${springVersion}"
+    api project(':common')
+    api "org.springframework:spring-webmvc:${springVersion}"
+    api group: "org.springframework", name: "spring-context", version: "${springVersion}"
 }

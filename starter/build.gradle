@@ -14,11 +14,11 @@ plugins {
 apply plugin: 'com.bmuschko.tomcat'
 
 dependencies {
-    compile project(":sys")
-    compile project(":order")
+    api project(":sys")
+    api project(":order")
 
-    compile "com.fasterxml.jackson.core:jackson-core:${jacksonVersion}"
-    compile "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}"
+    api "com.fasterxml.jackson.core:jackson-core:${jacksonVersion}"
+    api "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}"
     providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
 
     def tomcatVersion = '8.5.16'
